@@ -1,0 +1,3 @@
+- biome
+- types
+- hot reloading
