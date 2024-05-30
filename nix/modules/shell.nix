@@ -14,6 +14,10 @@
             
             name = "reags-shell";
             packages = deps.dev;
+
+            enterShell = ''
+            ${pkgs.bun}/bin/bun i
+            '';
         };
     };
 }

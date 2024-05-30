@@ -1,0 +1,13 @@
+{
+  "name": "reags",
+
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

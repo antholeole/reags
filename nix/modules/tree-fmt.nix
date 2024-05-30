@@ -4,7 +4,10 @@
     in {
         treefmt.programs = {
             programs.alejandra.enable = true;
-            programs.biome.enable = true;
+            programs.biome = {
+                package = pkgs.biome;
+                enable = true;
+            };
         };
     };
 }
