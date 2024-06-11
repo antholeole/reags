@@ -1,7 +1,6 @@
 {
-    "entryPoints": ["./glib-2.0.d.ts"],
-    "readme": "./README.md",
-    "name": "GLib-2.0",
-    "tsconfig": "./tsconfig.json"
+	"entryPoints": ["./glib-2.0.d.ts"],
+	"readme": "./README.md",
+	"name": "GLib-2.0",
+	"tsconfig": "./tsconfig.json"
 }
-

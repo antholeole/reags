@@ -1,13 +1,16 @@
-{ inputs, ...}: {
-    perSystem = { pkgs, ... }: let 
-        deps = (import ../deps.nix) pkgs;
-    in {
-        treefmt.programs = {
-            programs.alejandra.enable = true;
-            programs.biome = {
-                package = pkgs.biome;
-                enable = true;
-            };
+{inputs, ...}: {
+  perSystem = {pkgs, ...}: let
+    deps = (import ../deps.nix) pkgs;
+  in {
+    treefmt = {
+      projectRootFile = "flake.nix";
+      programs = {
+        alejandra.enable = true;
+        biome = {
+          package = pkgs.biome;
+          enable = true;
         };
+      };
     };
+  };
 }

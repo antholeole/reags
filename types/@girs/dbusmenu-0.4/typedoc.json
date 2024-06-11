@@ -1,7 +1,6 @@
 {
-    "entryPoints": ["./dbusmenu-0.4.d.ts"],
-    "readme": "./README.md",
-    "name": "Dbusmenu-0.4",
-    "tsconfig": "./tsconfig.json"
+	"entryPoints": ["./dbusmenu-0.4.d.ts"],
+	"readme": "./README.md",
+	"name": "Dbusmenu-0.4",
+	"tsconfig": "./tsconfig.json"
 }
-

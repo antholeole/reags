@@ -1,11 +1,4 @@
+imports.gi.versions.Gdk = "3.0";
+const Gdk = imports.gi.Gdk;
 
-
-  imports.gi.versions.Gdk = '3.0'
-  const Gdk = imports.gi.Gdk;
-  
-    module.exports = Gdk;
-  
-
-
-
-
+module.exports = Gdk;

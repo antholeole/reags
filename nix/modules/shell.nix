@@ -1,23 +1,19 @@
-{ inputs, ...}: {
-    perSystem = { pkgs, ... }: let 
-        deps = (import ../deps.nix) pkgs;
-    in {
+{inputs, ...}: {
+  perSystem = {pkgs, ...}: let
+    deps = (import ../deps.nix) pkgs;
+  in {
+    devenv.shells.default = {
+      devenv.root = let
+        devenvRootFileContent = builtins.readFile inputs.devenv-root.outPath;
+      in
+        pkgs.lib.mkIf (devenvRootFileContent != "") devenvRootFileContent;
 
-        
-        devenv.shells.default = {
-            
-          devenv.root =
-            let
-              devenvRootFileContent = builtins.readFile inputs.devenv-root.outPath;
-            in
-            pkgs.lib.mkIf (devenvRootFileContent != "") devenvRootFileContent;
-            
-            name = "reags-shell";
-            packages = deps.dev;
+      name = "reags-shell";
+      packages = deps.dev;
 
-            enterShell = ''
-            ${pkgs.bun}/bin/bun i
-            '';
-        };
+      enterShell = '' 
+        ${pkgs.nodejs_22}/bin/npm i
+      '';
     };
+  };
 }
