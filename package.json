@@ -1,11 +1,14 @@
 {
 	"name": "reags",
-
+	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"exports": "./src/index.ts",
-
+	"exports": {
+		".": "./src/index.ts",
+		"./components": "./src/"
+	},
 	"peerDependencies": {
 		"typescript": "^5.0.0"
-	}
+	},
+	"devDependencies": {}
 }

@@ -2,4 +2,12 @@
 ///
 ///
 
-export const render = (components: Component[]): JSX => {};
+import { RootComponent } from "./tree/component";
+
+export const render = (config: {
+    components: RootComponent[],
+}) => {
+    App.config({
+
+    })
+};

@@ -4,7 +4,7 @@ export enum ComponentType {
 }
 
 
-export const Component = (
+/*  */export const Component = (
     identifier: string,
     type: ComponentType,
 ):  => {

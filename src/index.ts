@@ -1,9 +1,15 @@
-import { RootComponent } from "./tree/component";
-import { ReagsContext } from "./tree/context"
+import { render } from "./bootstrap.js"
+import { RootComponent } from "./tree/component.js"
+import type { ReagsContext } from "./tree/context.js"
 
 let context: ReagsContext;
+const blah = {
+    test: "hi"
+}
 
-export default {
+export {
+    blah as default,
+    render,
+
     RootComponent,
-    something: "hi",
 }
