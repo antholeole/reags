@@ -1,15 +1,14 @@
-import { render } from "./bootstrap.js"
-import { RootComponent } from "./tree/component.js"
-import type { ReagsContext } from "./tree/context.js"
+import { render } from "./bootstrap.js";
+import type { ReagsElements } from "./widgets/index.js";
 
-let context: ReagsContext;
-const blah = {
-    test: "hi"
+declare global {
+	namespace JSX {
+        type IntrinsicElements = ReagsElements;
+
+        type Element = never;
+	}
 }
 
-export {
-    blah as default,
-    render,
-
-    RootComponent,
-}
+export { 
+    render 
+};
